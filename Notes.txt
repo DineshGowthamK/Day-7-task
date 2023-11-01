@@ -1,0 +1,72 @@
+/*//MAP
+//Without using MAP
+let arr = [12,13,14,15];
+let arr2=[];
+for (var i=0;i<arr.length;i=i+1){
+    arr2.push(arr[i]*2);
+}
+console.log(arr2);
+
+//With MAP
+//type 1
+const array = [12,13,14,15];
+function double(element){
+    return element*2;
+}
+const result = array.map(double);
+console.log(result);
+
+//type 2
+const array1 = [12,13,14,15];
+const result1 = array1.map(function (element){
+    return element*2;
+})
+console.log(result1);
+
+//type 3
+const array2 = [12,13,14,15];
+const result2 = array2.map((element)=>{
+    return element*2;
+})
+console.log(result2);
+
+//When there is only one line in function which return something
+const array3 = [12,13,14,15];
+const result3= array3.map((ele)=>ele*2)
+console.log(result);
+*/
+
+const array4 = ["apple","mango","orange"];
+const result = array4.map((ele)=>ele+"s");
+console.log(result);
+
+//Filter
+const arr= [12,13,14,15];
+const result = arr.filter((ele)=>ele%2===0);
+console.log(result);
+
+const great =[4,3,2,1,5];
+const result1=great.filter((val)=>val>2);
+console.log(result1);
+
+// Reduce Method
+const array = [1,2,3,4,5];
+const result =array.reduce((acc,cv)=>{
+    return acc+cv;
+},0);
+console.log(result);
+
+const array1 = [1,2,3,4,5];
+const result1 =array1.reduce((acc,cv)=>{
+    return acc*cv;
+},1);
+console.log(result1);
+
+const array2 = [1,20,3,25,5];
+const result2 =array2.reduce((acc,cv)=>{
+    // if(acc>cv){
+    //     cv=acc;
+    // }
+    return Math.max(acc,cv);
+});
+console.log(result2);
