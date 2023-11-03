@@ -65,10 +65,6 @@ request5.send();
 request5.onload = function(){
     const data5 = request5.response;
     const result5 = JSON.parse(data5);
-    const res5 = result5.filter((ele)=>{
-        if(ele.currencies==="US dollars"){
-            console.log(ele.name.common);
-        }
-    })
-    console.log(res5);
+    const currency = result5.filter((ele)=> ele.currencies && ele.currencies.USD)
+    currency.forEach((ele)=>console.log(ele.name.common));
 }
